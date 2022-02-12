@@ -1,4 +1,18 @@
 // 全局样式
+// 引入icon
+@import './icon.less';
+* {
+  box-sizing: border-box;
+}
 body {
-  background-color: pink;
+  background-color: #f5f7f9;
+}
+
+// 频道编辑popup弹出层
+.channel-edit-popup {
+  height: 100%;
+  border-radius: 10px 10px 0 0 !important;
+}
+/deep/.van-popup__close-icon--top-left {
+  color: #222 !important;
 }
