@@ -3,6 +3,7 @@ const path = require('path')
 // 利用path模块获取自定义覆盖样式的less文件的绝对路径
 const thremPath = path.join(__dirname, './src/styles/threm.less')
 module.exports = {
+  publicPath: './',
   css: {
     loaderOptions: {
       less: {

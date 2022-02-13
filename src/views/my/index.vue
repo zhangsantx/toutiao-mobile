@@ -38,7 +38,16 @@
     </van-cell-group>
     <!-- 未登录状态 -->
     <div v-else class="not-login">
-      <div @click="$router.push('/login')">
+      <div
+        @click="
+          $router.push({
+            name: 'login',
+            query: {
+              redirect: '/my'
+            }
+          })
+        "
+      >
         <img class="avator-no-login" src="./avatar-no-login.png" alt="" />
       </div>
       <div class="text">登录 / 注册</div>
