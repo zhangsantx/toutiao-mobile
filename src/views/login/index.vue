@@ -72,13 +72,15 @@ export default {
         // 登录成功
         this.$toast.success('登录成功')
         // 存储用户登录状态token等数据报错到vuex中
+        console.log(data.data)
         this.$store.commit('setUser', data.data)
 
         // 移除layout页面缓存，重新渲染
         this.$store.commit('removeCachePage', 'LayoutIndex')
 
         // 跳转原来的页面(临时解决方案)
-        this.$router.back()
+        // this.$router.back()
+        this.$router.push(this.$route.query.redirect || '/')
       } catch (err) {
         // 登录失败
         this.$toast({
